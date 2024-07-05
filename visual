@@ -1,0 +1,31 @@
+import streamlit as st
+import matplotlib.pyplot as plt
+
+# Title and description
+st.title('EarthCosmos Predict')
+st.write('An integrated system for predicting earthquakes and cosmic weather events.')
+
+# Sidebar for user input
+st.sidebar.header('Input Parameters')
+solar_flare_input = st.sidebar.slider('Solar Flare Intensity', 0.0, 10.0, 5.0)
+geomagnetic_input = st.sidebar.slider('Geomagnetic Index', 0.0, 100.0, 50.0)
+cosmic_ray_input = st.sidebar.slider('Cosmic Ray Flux', 0.0, 1000.0, 500.0)
+
+# Predict with the models
+input_data = np.array([[solar_flare_input, geomagnetic_input, cosmic_ray_input]])
+pca_input = pca.transform(input_data)
+earthquake_prediction = earthquake_model.predict(pca_input)
+cosmic_weather_prediction = cosmic_weather_model.predict(pca_input)
+
+# Display predictions
+st.write(f'Predicted Earthquake Magnitude: {earthquake_prediction[0]:.2f}')
+st.write(f'Predicted Geomagnetic Index: {cosmic_weather_prediction[0]:.2f}')
+
+# Visualizing the data
+fig, ax = plt.subplots()
+ax.plot(combined_data['timestamp'], combined_data['magnitude'], label='Actual Magnitude')
+ax.plot(combined_data['timestamp'][:len(y_earthquake_pred)], y_earthquake_pred, label='Predicted Magnitude', linestyle='--')
+ax.set_xlabel('Timestamp')
+ax.set_ylabel('Earthquake Magnitude')
+ax.legend()
+st.pyplot(fig)
