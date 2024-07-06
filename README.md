@@ -1,7 +1,7 @@
-# EarthCosmosPredict
+#  SeismicSpaceAI
 
 ## Overview
-**EarthCosmosPredict** is an integrated machine learning-based system designed to predict earthquakes and cosmic weather events. By leveraging NASA's open data and other relevant datasets, this project aims to provide advanced warnings and potential impact assessments to help mitigate the effects of these natural phenomena.
+** SeismicSpaceAI ** is an integrated machine learning-based system designed to predict earthquakes and cosmic weather events. By leveraging NASA's open data and other relevant datasets, this project aims to provide advanced warnings and potential impact assessments to help mitigate the effects of these natural phenomena.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -52,4 +52,4 @@ We welcome contributions from the community. To contribute:
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-EarthCosmosPredict - Integrating Earthquake and Cosmic Weather Predictions for a Safer World
+ SeismicSpaceAI - Integrating Earthquake and Cosmic Weather Predictions for a Safer World
